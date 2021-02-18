@@ -1,0 +1,45 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+{% if searchterm %}
+<h2>Resultat för '{{ searchterm }}':</h2>
+{% endif %}
+
+
+<style>
+.card-header-striped{
+background: black;
+color: white;
+}
+.card-header {
+    background-color: black;
+    color: white;
+}
+</style>
+
+
+<table class="table table-striped">
+    <div class="card text-center">
+        <div class="card-header">
+            <h5>Användare:</h5>
+        </div>
+    </div>
+    <tbody>
+    <tr>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}

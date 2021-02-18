@@ -1,0 +1,68 @@
+<nav class="navbar navbar-dark bgdimgrey">
+    <a class="navbar-brand" href="{% url 'hem' %}"><h2>HatSlasker</h2></a>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <form class="d-flex">
+                <input aria-label="Search" class="form-control me-2" name="search" placeholder="Sök namn" type="search">
+                <button class="btn btn-outline-success" type="submit">Sök</button>
+            </form>
+        </div>
+    </nav>
+</nav>
+
+
+<style>
+    .bgblack{
+    background:black;
+    }
+    .bgdimgrey{
+    background:#201F1F;
+    }
+    .navbar-dark .navbar-brand {
+    color: #FF5100;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+.bg-light {
+    background-color: #201F1F!important;
+}
+.form-control.me-2{
+background: black;
+border-color: #FF5100;
+color: white;
+}
+.btn.btn-outline-success {
+color: white;
+background: black;
+border-color: #FF5100;
+}
+
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bgblack">
+
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarNav" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'hem' %}">Hem <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'felbrodyr' %}">Registrera Felbrodyr</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'minskalager' %}">Tag keps ur lager</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'nyanvandare' %}">Skapa ny användare</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<hr>

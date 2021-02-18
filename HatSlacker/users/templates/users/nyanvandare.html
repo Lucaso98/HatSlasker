@@ -1,0 +1,53 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+<style>
+      .btn-primary {
+    color: white;
+    background-color: #FF5100;
+    border-color: black;
+}
+.card-body {
+    background: #201F1F;
+    color: white;
+}
+.card-header {
+    background-color: black;
+    color: white;
+}
+.form-control{
+border-color: black;
+background: white;
+}
+
+</style>
+
+
+<div class="card text-center">
+
+    <div class="card-header">
+        <h5>Skapa användare:</h5>
+    </div>
+
+    <div class="card-body">
+        <form action="/skapa-anvandare" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" name="first_name" placeholder="First name" required type="text">
+                </div>
+                <div class="col">
+                    <input class="form-control" name="last_name" placeholder="Last name" required type="text">
+                </div>
+            </div>
+            <hr>
+
+            <div>
+                <button class="btn btn-primary" type="submit">Skapa användare</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
